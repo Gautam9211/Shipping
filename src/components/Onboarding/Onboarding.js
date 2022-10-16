@@ -1,7 +1,7 @@
 import {Text, View,Image, TouchableOpacity,Dimensions, Animated} from "react-native";
 import React ,{useEffect}from "react";
 import {styles} from "./styles";
-import SignUpButton from "../signupButton/SignUpButton";
+import SignUpButton from "../auth/signupButton/SignUpButton";
 const {width} = Dimensions.get('window');
 
 const slides = [{
@@ -84,7 +84,7 @@ const Onboarding = (props) => {
             
             <TouchableOpacity
             onPress={()=>{
-                console.log("signin")
+                props.navigation.push("SignIn")
             }}
             style={styles.signInButton}>
                  <Text style={{...styles.signupButtonText,color:"#5800FF"}}>Sign In</Text>

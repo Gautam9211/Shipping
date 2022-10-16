@@ -16,7 +16,7 @@ export default SignUp = ({navigation})=>{
             <Image 
                resizeMode={'cover'}
                style={{ width:width, height: 300 }}
-               source ={require('../../utilities/images/onboarding1.jpg')} />
+               source ={require('../../../utilities/images/onboarding1.jpg')} />
      <View style = {{marginTop:10,borderTopLeftRadius:20,borderTopRightRadius:20,border:1}}>
         <View style={{justifyContent: 'center',alignItems: 'center'}}>
         <Text style={styles.signUpText}>Sign Up Using</Text>
@@ -24,7 +24,7 @@ export default SignUp = ({navigation})=>{
           <Image 
                resizeMode={'contain'}
                style={{ width:70, height: 70 }}
-               source ={require('../../utilities/images/google-icon.png')} />
+               source ={require('../../../utilities/images/google-icon.png')} />
         </TouchableOpacity>
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -80,13 +80,26 @@ export default SignUp = ({navigation})=>{
         placeholder="Password"
       />
   </View>
-  <Text style={{color:"black",textAlign:"center",fontSize:13,fontWeight:"500"}}>By Signing up,you agree to our Privacy Policy  and T&C</Text>
+  <Text style={{color:"black",textAlign:"center",fontSize:13,fontWeight:"500"}}>By Signing up,you agree to our Privacy Policy and T&C</Text>
   <TouchableOpacity style = {styles.signupButton} onPress={()=>{
         }}>
              <Text style={styles.signupButtonText}>Sign Up</Text>
         </TouchableOpacity>
         </View>
-        <Text style={{color:"black",textAlign:"center",fontSize:13,fontWeight:"500",marginBottom:10}}>Already have an account? Sign In</Text>
+
+
+   
+
+
+
+
+        <View style={{display:"flex",flexDirection:"row",marginHorizontal:70,marginTop:10,marginBottom:40}}>
+  <Text style={{color:"black"}}>Already have an account?</Text><TouchableOpacity onPress={()=>{
+     navigation.push("SignIn")
+  }}> 
+   <Text style={{color:"#5800FF",marginLeft:5}}>Sign In</Text>
+ </TouchableOpacity></View>
+
   </ScrollView>
      
     )
